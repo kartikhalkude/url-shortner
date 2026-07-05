@@ -1,12 +1,12 @@
 {
   "name": "prep",
   "version": "1.0.0",
-  "main": "server.js",
+  "main": "src/server.js",
   "scripts": {
-  "dev": "tsx watch src/server.ts",
-  "start": "tsx src/server.ts",
-  "build": "tsc"
-},
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "build": "echo \"No build step required\""
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,11 +22,5 @@
     "mongoose": "^9.7.3",
     "morgan": "^1.11.0"
   },
-  "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/node": "^26.1.0",
-    "tsx": "^4.23.0",
-    "typescript": "^6.0.3"
-  }
+  "devDependencies": {}
 }
