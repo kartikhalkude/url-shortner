@@ -27,6 +27,8 @@ export const authMiddleware = async (req, res, next) => {
       throw new AppError(401, "User Not Found");
     }
     req.user = user;
+    
+    
 
     next();
   } catch (error) {
