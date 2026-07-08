@@ -3,7 +3,7 @@ import {
   createShortUrl,
   deleteUrl,
   getAnalytics,
-  getUrls,
+  getAllUsersUrls,
   redirectToOriginalUrl,
   updateURL,
 } from "../services/url.service.js";
@@ -33,8 +33,8 @@ export async function redirectUrl(req, res, next) {
 
 export async function getUserUrls(req, res, next) {
   try {
-    const owner = req.user.id;
-    const urls = await getUrls(owner);
+
+    const urls = await getAllUsersUrls(req.user.id,req.query);
     res.status(200).json({
       urls,
     });

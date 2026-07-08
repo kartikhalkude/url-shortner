@@ -12,7 +12,7 @@ const urlSchema = new mongoose.Schema(
       required: true,
       unique: true,
     },
-    customAlais: {
+    customAlias: {
       type: String,
       unique: true,
       sparse: true, //allows null values
